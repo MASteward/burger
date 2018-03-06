@@ -3,7 +3,7 @@
 <h2>Burgers that are not devoured!</h2>
 
 <ul>
-  {{#each burgers}}
+  <p class="burgerlist">{{#each burgers}}</p>
     {{#unless devoured}}
       {{> burgers/burger-block hungry=true}}
     {{/unless}}
