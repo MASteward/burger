@@ -1,32 +1,50 @@
-<h1>Burgers!</h1>
-
-<h2>Burgers that are not devoured!</h2>
-
-<ul>
-  <p class="burgerlist">{{#each burgers}}</p>
-    {{#unless devoured}}
-      {{> burgers/burger-block hungry=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Devoured Burgers!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block hungry=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Order Burger:</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="hb">Burger:</label>
-    <input type="text" id="hb" name="name">
+<div class="row">
+  <div class="col-md-12 logo">
+    <img src="/assets/img/burgerImage.png" alt="burger image">
   </div>
+</div>
 
-  <button class="orderBtn" type="submit">Place Order</button>
-</form>
+<div class="row heading">
+  <div class="col-md-6">
+    <h2 class="title">Order Up!</h2>
+    <div class="row burger-info">
+      <div class="col-md-12">
+        {{#each burgers}}
+          {{#unless devoured}}
+            {{> burgers/burger-block hungry=true}}
+          {{/unless}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <h2 class="title">Consumed!</h2>
+    <div class="row burger-info">
+      <div class="col-md-12">
+        {{#each burgers}}
+          {{#if devoured}}
+            {{> burgers/burger-block hungry=false}}
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row burgerOrder">
+  <form class="create-form">
+    <div class="col-md-3"></div>
+
+    <div class="col-md-6 form-group">
+
+      <div class="row">
+        <div class="col-md-12">
+          <label for="hb" class="title orderWindow"><h2>Order Window</h2></label><br>
+          <textarea type="text" name="name" id="hb"></textarea>
+          <button type="submit" class="orderBtn">Place Order</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+  </form>
+</div>

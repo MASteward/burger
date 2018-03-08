@@ -1,8 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #A7C5BD;
   color: #CF4647;
 }
 
-.burgerNames {
-  list-style: none;
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo {
+  text-align: center;
+  background-color: rgb(238, 231, 211);
+}
+.title {
+  font-family: 'Creepster', cursive;
+  text-decoration: underline;
+}
+.burger-info {
+  padding: 0;
+}
+
+.burgerName,
+.eaten {
+  font-size: 20px;
+  margin-right: 20px;
+  padding: 5px;
+}
+
+.devoured,
+.orderBtn {
+  border-radius: 5px;
+  /* position: relative; */
+}
+
+#hb {
+  width: 300px;
+  height: 75px;
+}
+
+.orderBtn {
+  position: relative;
+  bottom: 8px;
 }
